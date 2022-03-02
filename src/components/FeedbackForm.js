@@ -14,11 +14,11 @@ const FeedbackForm = () => {
 
     useEffect(() => {
         if (feedbackEdit.edit === true) {
-          setBtnDisabled(false)
-          setText(feedbackEdit.item.text)
-          setRating(feedbackEdit.item.rating)
+            setBtnDisabled(false)
+            setText(feedbackEdit.item.text)
+            setRating(feedbackEdit.item.rating)
         }
-      }, [feedbackEdit])
+    }, [feedbackEdit])
 
     const handleTextChange = (e) => {
         if (text === "") {
@@ -41,7 +41,7 @@ const FeedbackForm = () => {
                 text,
                 rating,
             };
-            if(feedbackEdit.edit === true) {
+            if (feedbackEdit.edit === true) {
                 updateFeedback(feedbackEdit.item.id, newFeedback)
             } else {
                 addFeedback(newFeedback);
